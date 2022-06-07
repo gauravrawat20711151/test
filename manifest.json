@@ -1,7 +1,7 @@
 {
-  "name": "The Own Gym",
-  "short_name": "OG",
-  "description": "Home gym web app.",
+  "name": "JUST DO IT",
+  "short_name": "JDI",
+  "description": "Health pwa",
   "start_url": "./secpage.html",
   "display": "standalone",
   "lang": "English",
