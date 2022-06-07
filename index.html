@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The Official website for knuckleheads">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='manifest' href='./manifest.json'>
+    <link href="./css/index.css" rel="stylesheet">
+    <title>JUST DO IT</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>JUST DO IT</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="thirdpage.html">Exercises</a></li>
+                <li><a href="dietpage.html">Diet</a></li>
+                <li><a href="Nutrition_needed.html">Nutrients</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="center-img">
+        <div class="container-imgtxt">
+            <p>Health is Wealth</p>
+            
+        </div>
+    </section>
+
+    <section class="colms3">
+        <div>
+            <a href="bmi.html"><h4>BMI calculator</h4></a>
+            <p>Find if you are at healthy weight.</p>
+        </div>
+
+        <div>
+           <a href="calorie.html"><h4>Calorie Finder</h4></a>
+            <p>Search calories in food.</p>
+        </div>
+
+        <div>
+            <a href="basemetabolicrate.html"><h4>Base Metabolic Rate</h4></a>
+            <p>Find the calorie your body require.</p>
+        </div>
+    </section>
+
+    <!--Attaching service worker-->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (registration) {
+                    console.log('Registered:', registration);
+                })
+                .catch(function (error) {
+                    console.log('Registration failed: ', error);
+                });
+        }
+    </script>
+
+</body>
+
+</html>

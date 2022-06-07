@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Base Metabolic Rate
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel='stylesheet' href='./css/style.css'>
+	</head>
+
+	<body>
+		<h2>Base Metabolic Rate</h2>
+
+		<form>
+		<div class="container">
+			<div class="inside">
+		Enter Height(in cm):<br/><input type="number" id="Height"/><br>
+		Enter Weight(in kilogram):<br/><input type="number" id="Weight"/><br>
+		Enter Age:<br/><input type='number' id='Age'/><br>
+		<button type="button" onclick="formmale()">Male</button>
+		<button type="button" onclick='formfemale()'>Female</button>
+		</div>
+	</div>
+		</form>
+	
+		<p id="result"></p>
+		
+
+		<script type="text/javascript">
+			function formmale() 
+			{
+				
+				var height= document.getElementById("Height").value;
+				var weight= document.getElementById("Weight").value;
+				var age = document.getElementById('Age').value;
+				if (height==null || height=="" || weight==null || weight=="" || age==null || age=="")
+				{
+					alert("Please fill all the inputs");
+					return false;
+				}
+				var res = 66.4730+(13.7516*weight)+(5.0033*height)-(6.7550*age);
+				document.getElementById('result').innerHTML = `${res} calories`;
+			}
+			
+			function formfemale() {
+				
+				var height= document.getElementById("Height").value;
+				var weight= document.getElementById("Weight").value;
+				var age = document.getElementById('Age').value;
+				if (height==null || height=="" || weight==null || weight=="" || age==null || age=="")
+				{
+					alert("Please fill all the inputs");
+					return false;
+				}
+				var res = 655.0955+(9.5634*weight)+(1.8496*height)-(4.6756*age);
+				document.getElementById('result').innerHTML = `${res} calories`;
+			}
+		</script>
+	</body>
+</html>

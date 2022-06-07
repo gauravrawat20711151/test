@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+
+		function f1() {
+
+			wgt = document.getElementById('wgt').value;
+			document.getElementById('protein').value = wgt * 2.2 + " gm";
+			document.getElementById('carbs').value = wgt * 0.75 + " gm";
+			document.getElementById('energy').value = wgt * 12 + " calories";
+
+
+		}
+
+	</script>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<h2>Nutrients Required By Weight-</h2>
+	<div class="container">
+		<div class="inside">
+			Weight(in kgs) :- <input type="text"
+				oninput="f1()" id="wgt">
+			<br><br><br>
+			Protein Needed :- <input type="text" id="protein" readonly>
+			<br><br>
+			Carbohydrate Needed :-<input type="text" id="carbs" readonly>
+			<br><br>
+			Energy Needed :-<input type="text" id="energy" readonly>
+		</div>
+	</div>
+
+</body>
+
+</html>
